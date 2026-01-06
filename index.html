@@ -256,6 +256,40 @@
             color: #555;
             font-size: 0.9em;
         }
+
+        /* Mobile-Specific Adjustments (for screens smaller than 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Reduces outer margin to give more space */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Shrinks the title so it doesn't wrap awkwardly */
+    }
+
+    .detail-header {
+        flex-direction: column; /* Stacks poster on top of text instead of side-by-side */
+        align-items: center;
+        text-align: center;
+    }
+
+    .detail-poster {
+        width: 100%; /* Poster takes full width on small screens */
+        max-width: 250px; /* But doesn't get ridiculously huge */
+        height: auto;
+    }
+
+    .id-item {
+        flex-direction: column; /* Stacks ID labels above the values */
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .id-value {
+        width: 100%; /* Makes the ID boxes easier to tap */
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
